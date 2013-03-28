@@ -1,0 +1,32 @@
+<% provide(:title, 'Register New Employee') %>
+<h1>Register New Employee</h1>
+<p>
+Truth, Transparency, Throughput
+</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :"oneCARE Email" %>
+      <%= f.text_field :email %>
+
+      <%= f.label :"Password (Must be greater than 6 characters)" %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Register", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<p>
+
+To Go Back To The Home Page: <a href="http://localhost:3000/static_pages/home">Click Here</a>.
+</p>
+

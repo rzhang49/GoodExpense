@@ -1,0 +1,40 @@
+<h1>Listing payrolls</h1>
+
+<table>
+  <tr>
+    <th>Employee name</th>
+    <th>Date</th>
+    <th>Job title</th>
+    <th>Date begin</th>
+    <th>Date end</th>
+    <th>Hours</th>
+    <th>Comments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payrolls.each do |payroll| %>
+  <tr>
+    <td><%= payroll.Employee_Name %></td>
+    <td><%= payroll.Date %></td>
+    <td><%= payroll.Job_Title %></td>
+    <td><%= payroll.Date_Begin %></td>
+    <td><%= payroll.Date_End %></td>
+    <td><%= payroll.Hours %></td>
+    <td><%= payroll.Comments %></td>
+    <td><%= link_to 'Show', payroll %></td>
+    <td><%= link_to 'Edit', edit_payroll_path(payroll) %></td>
+    <td><%= link_to 'Destroy', payroll, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payroll', new_payroll_path %>
+
+<p>
+To go back: <a href="http://localhost:3000/static_pages/home">Click Here</a>.
+</p>
+

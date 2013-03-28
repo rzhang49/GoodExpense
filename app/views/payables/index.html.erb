@@ -1,0 +1,41 @@
+<h1>Listing payables</h1>
+
+<table>
+  <tr>
+    <th>Document number</th>
+    <th>Type</th>
+    <th>Dd</th>
+    <th>Pbk</th>
+    <th>Clrngdoc</th>
+    <th>Text</th>
+    <th>Docdate</th>
+    <th>Netdue</th>
+    <th>Amount due</th>
+    <th>Currency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payables.each do |payable| %>
+  <tr>
+    <td><%= payable.Document_Number %></td>
+    <td><%= payable.Type %></td>
+    <td><%= payable.DD %></td>
+    <td><%= payable.PBK %></td>
+    <td><%= payable.ClrngDoc %></td>
+    <td><%= payable.Text %></td>
+    <td><%= payable.DocDate %></td>
+    <td><%= payable.NetDue %></td>
+    <td><%= payable.Amount_Due %></td>
+    <td><%= payable.Currency %></td>
+    <td><%= link_to 'Show', payable %></td>
+    <td><%= link_to 'Edit', edit_payable_path(payable) %></td>
+    <td><%= link_to 'Destroy', payable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payable', new_payable_path %>

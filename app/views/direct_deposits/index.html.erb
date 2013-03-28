@@ -1,0 +1,33 @@
+<h1>Listing direct_deposits</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bank account number</th>
+    <th>Routing number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @direct_deposits.each do |direct_deposit| %>
+  <tr>
+    <td><%= direct_deposit.Name %></td>
+    <td><%= direct_deposit.Bank_Account_Number %></td>
+    <td><%= direct_deposit.Routing_Number %></td>
+    <td><%= link_to 'Show', direct_deposit %></td>
+    <td><%= link_to 'Edit', edit_direct_deposit_path(direct_deposit) %></td>
+    <td><%= link_to 'Destroy', direct_deposit, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Direct deposit', new_direct_deposit_path %>
+
+
+<p>
+To go back: <a href="http://localhost:3000/static_pages/home">Click Here</a>.
+</p>
+

@@ -1,0 +1,9 @@
+require 'mongrel_cluster/recipes'
+set :application, "sample_app"
+# We only have one host
+role :web, "sample_onecareapp.com"
+role :app, "sample_onecareapp.com"
+role :db,  "sample_onecareapp.com", :primary => true
+# Don't forget to change this
+set :deploy_to, "/home/onecare/RubymineProjects/sample_app"
+set :mongrel_conf, "/home/onecare/RubymineProjects/sample_app/config/mongrel_cluster.yml"

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Employee name:</b>
+  <%= @payroll.Employee_Name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @payroll.Date %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%= @payroll.Job_Title %>
+</p>
+
+<p>
+  <b>Date begin:</b>
+  <%= @payroll.Date_Begin %>
+</p>
+
+<p>
+  <b>Date end:</b>
+  <%= @payroll.Date_End %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @payroll.Hours %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @payroll.Comments %>
+</p>
+
+<%= link_to 'Edit', edit_payroll_path(@payroll) %> |
+<%= link_to 'Back', payrolls_path %>|
+<%= link_to 'Home',http://localhost:3000/static_pages/home %>

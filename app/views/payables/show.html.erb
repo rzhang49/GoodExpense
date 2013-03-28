@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Document number:</b>
+  <%= @payable.Document_Number %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @payable.Type %>
+</p>
+
+<p>
+  <b>Dd:</b>
+  <%= @payable.DD %>
+</p>
+
+<p>
+  <b>Pbk:</b>
+  <%= @payable.PBK %>
+</p>
+
+<p>
+  <b>Clrngdoc:</b>
+  <%= @payable.ClrngDoc %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @payable.Text %>
+</p>
+
+<p>
+  <b>Docdate:</b>
+  <%= @payable.DocDate %>
+</p>
+
+<p>
+  <b>Netdue:</b>
+  <%= @payable.NetDue %>
+</p>
+
+<p>
+  <b>Amount due:</b>
+  <%= @payable.Amount_Due %>
+</p>
+
+<p>
+  <b>Currency:</b>
+  <%= @payable.Currency %>
+</p>
+
+
+<%= link_to 'Edit', edit_payable_path(@payable) %> |
+<%= link_to 'Back', payables_path %>

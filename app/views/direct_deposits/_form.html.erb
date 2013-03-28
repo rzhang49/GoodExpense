@@ -1,0 +1,29 @@
+<%= form_for(@direct_deposit) do |f| %>
+  <% if @direct_deposit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@direct_deposit.errors.count, "error") %> prohibited this direct_deposit from being saved:</h2>
+
+      <ul>
+      <% @direct_deposit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Bank_Account_Number %><br />
+    <%= f.number_field :Bank_Account_Number %>
+  </div>
+  <div class="field">
+    <%= f.label :Routing_Number %><br />
+    <%= f.number_field :Routing_Number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
