@@ -1,4 +1,7 @@
 SampleApp::Application.routes.draw do
+  resources :expense_reports
+
+
   resources :payables
 
 

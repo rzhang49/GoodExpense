@@ -1,0 +1,708 @@
+<%= javascript_include_tag "prototype" %>
+
+<%= form_for(@expense_report) do |f| %>
+  <% if @expense_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@expense_report.errors.count, "error") %> prohibited this expense_report from being saved:</h2>
+
+      <ul>
+      <% @expense_report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<TABLE align=left>
+
+
+<TR>
+  <TD>
+    <%= f.label :Employee_Name %>
+
+  </TD>
+  <TD>
+
+    
+<select id="employee" name="employee">
+  <option class="" value="Ronald Zhang">Ronald Zhang</option>
+  <option class="" value="Dave Stauffer">Dave Stauffer</option>
+</select>
+
+</TD>
+<TD>
+
+    <%= f.label :"Cost Center" %>
+</TD>
+
+  <TD>
+    <%= text_field "division", "division" %>
+  </TD>
+<TD>
+    <%= f.label :Department %>
+</TD>  
+<TD>
+    <%= text_field "Department","Department" %>
+  </TD>
+</TR>
+  <TR>
+<TD>
+    <%= f.label :From %>
+</TD> 
+ <TD>
+    <%= text_field "From","From" %>
+  </TD>
+<TD>
+    <%= f.label :To %>
+</TD>  
+<TD>
+    <%= text_field "To","To" %>
+  </TD>
+<TD>
+    <%= f.label :Business_Purpose %>
+</TD>  
+<TD>
+    <%= text_field "Business_Purpose","Business_Purpose" %>
+  </TD>
+  </TR>
+
+<TR>
+<TD>
+
+</TD>
+<TD>
+Sunday
+</TD>
+
+<TD>
+Monday
+</TD>
+<TD>
+Tuesday
+</TD>
+<TD>
+Wednesday
+</TD>
+<TD>
+Thursday
+</TD>
+<TD>
+Friday
+</TD>
+<TD>
+Saturday
+</TD>
+</TR>
+  <TR>
+<TD>
+    <%= f.label :Date %>
+</TD>  
+<TD>
+    <%= text_field "Date1","Date1" %>
+  </TD>  
+<TD>
+    <%=  text_field "Date2","Date2" %>
+  </TD>  
+<TD>
+    <%=  text_field "Date3","Date3" %>
+  </TD>  
+<TD>
+    <%=  text_field "Date4","Date4" %>
+  </TD>  
+<TD>
+    <%=  text_field "Date5","Date5" %>
+  </TD>  
+<TD>
+    <%= text_field "Date6","Date6" %>
+  </TD>  
+<TD>
+    <%=  text_field "Date7","Date7" %>
+  </TD>
+  </TR>
+<TR>
+<TD>
+Travel & Lodging
+</TD>
+</TR>
+  <TR>
+<TD>
+    <%= f.label :"Miles" %>
+</TD>  
+<TD>
+    <%= text_field "Amount1","Amount1" %>
+  </TD>  
+<TD>
+    <%= text_field "Amount2","Amount2"%>
+  </TD>  
+<TD>
+    <%= text_field "Amount3","Amount3" %>
+  </TD>  
+<TD>
+    <%= text_field "Amount4","Amount4" %>
+  </TD>  
+<TD>
+    <%= text_field "Amount5","Amount5" %>
+  </TD>  
+<TD>
+    <%= text_field "Amount6","Amount6" %>
+  </TD>  
+<TD>
+    <%= text_field "Amount7","Amount7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Airfare, maxlength:8 %>
+</TD>  
+<TD>
+    <%= text_field "Airfare1","Airfare1" %>
+  </TD>  
+<TD>
+    <%= text_field "Airfare2","Airfare2" %>
+  </TD>  
+<TD>
+    <%= text_field "Airfare3","Airfare3" %>
+  </TD>  
+<TD>
+    <%= text_field "Airfare4","Airfare4" %>
+  </TD>  
+<TD>
+    <%= text_field "Airfare5","Airfare5" %>
+  </TD>  
+<TD>
+    <%= text_field "Airfare6","Airfare6" %>
+  </TD>  
+<TD>
+    <%= text_field "Airfare7","Airfare7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :"Taxi & Transportation" %>
+</TD>  
+<TD>
+    <%= text_field "Taxi1","Taxi1" %>
+  </TD>  
+<TD>
+    <%= text_field "Taxi2","Taxi2"%>
+  </TD>  
+<TD>
+    <%= text_field "Taxi3","Taxi3" %>
+  </TD>  
+<TD>
+    <%= text_field "Taxi4","Taxi4" %>
+  </TD>  
+<TD>
+    <%= text_field "Taxi5","Taxi5" %>
+  </TD>  
+<TD>
+    <%= text_field "Taxi6","Taxi6"%>
+  </TD>  
+<TD>
+    <%= text_field "Taxi7","Taxi7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :"Tolls & Parking" %>
+</TD>  
+<TD>
+    <%= text_field "Tolls1","Tolls1" %>
+  </TD>  
+<TD>
+    <%= text_field "Tolls2","Tolls2" %>
+  </TD>  
+<TD>
+    <%= text_field "Tolls3","Tolls3" %>
+  </TD>  
+<TD>
+    <%= text_field "Tolls4","Tolls4" %>
+  </TD>  
+<TD>
+    <%= text_field "Tolls5","Tolls5" %>
+  </TD>  
+<TD>
+    <%= text_field "Tolls6","Tolls6" %>
+  </TD>  
+<TD>
+    <%= text_field "Tolls7","Tolls7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Car_Rental %>
+</TD>  
+<TD>
+    <%= text_field "Car1","Car1" %>
+  </TD>  
+<TD>
+    <%= text_field "Car2","Car2" %>
+  </TD>  
+<TD>
+    <%= text_field "Car3","Car3" %>
+  </TD>  
+<TD>
+    <%= text_field "Car4","Car4" %>
+  </TD>  
+<TD>
+    <%= text_field "Car5","Car5" %>
+  </TD>  
+<TD>
+    <%= text_field "Car6","Car6" %>
+  </TD>  
+<TD>
+    <%= text_field "Car7","Car7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Gas %>
+</TD>  
+<TD>
+    <%= text_field "Gas1","Gas1"%>
+  </TD>  
+<TD>
+    <%= text_field "Gas2","Gas2"%>
+  </TD>  
+<TD>
+    <%= text_field "Gas3","Gas3" %>
+  </TD>  
+<TD>
+    <%= text_field "Gas4","Gas4" %>
+  </TD>  
+<TD>
+    <%= text_field "Gas5","Gas5" %>
+  </TD>  
+<TD>
+    <%= text_field "Gas6","Gas6" %>
+  </TD>  
+<TD>
+    <%= text_field "Gas7","Gas7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Hotel %>
+</TD>  
+<TD>
+    <%= text_field "Hotel1","Hotel1" %>
+  </TD>  
+<TD>
+    <%= text_field "Hotel2","Hotel2" %>
+  </TD>  
+<TD>
+    <%= text_field "Hotel3","Hotel3" %>
+  </TD>  
+<TD>
+    <%= text_field "Hotel4","Hotel4" %>
+  </TD>  
+<TD>
+    <%= text_field "Hotel5","Hotel5" %>
+  </TD>  
+<TD>
+    <%= text_field "Hotel6","Hotel6" %>
+  </TD>  
+<TD>
+    <%= text_field "Hotel7","Hotel7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Other %>
+</TD>  
+<TD>
+    <%= text_field "Other1","Other1" %>
+  </TD>  
+<TD>
+    <%= text_field "Other2","Other2" %>
+  </TD>  
+<TD>
+    <%= text_field "Other3","Other3" %>
+  </TD>  
+<TD>
+    <%= text_field "Other4","Other4" %>
+  </TD>  
+<TD>
+    <%= text_field "Other5","Other5" %>
+  </TD>  
+<TD>
+    <%= text_field "Other6","Other6" %>
+  </TD>  
+<TD>
+    <%= text_field "Other7","Other7" %>
+  </TD>
+  </TR>
+<TR>
+<TD >
+<div>
+Travel and Lodging Subtotal
+</div>
+</TD>
+<TD>
+<div id = "travel_sub1">
+The subtotals will show here
+</div>
+
+
+</TD>
+</TR>
+<TR>
+<TD>
+Meals & Entertainment
+</TD>
+</TR>
+  <TR>
+<TD>
+    <%= f.label :Breakfast %>
+</TD>  
+<TD>
+    <%= text_field "Breakfast1","Breakfast1" %>
+  </TD>  
+<TD>
+    <%= text_field "Breakfast2","Breakfast2" %>
+  </TD>  
+<TD>
+    <%= text_field "Breakfast3","Breakfast3" %>
+  </TD>  
+<TD>
+    <%= text_field "Breakfast4","Breakfast4" %>
+  </TD>  
+<TD>
+    <%= text_field "Breakfast5","Breakfast5" %>
+  </TD>  
+<TD>
+    <%= text_field "Breakfast6","Breakfast6" %>
+  </TD>  
+<TD>
+    <%= text_field "Breakfast7","Breakfast7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Lunch, maxlength:8 %>
+</TD>  
+<TD>
+    <%= text_field "Lunch1","Lunch1" %>
+  </TD>  
+<TD>
+    <%= text_field "Lunch2","Lunch2" %>
+  </TD>  
+<TD>
+    <%= text_field "Lunch3","Lunch3"%>
+  </TD>  
+<TD>
+    <%= text_field "Lunch4","Lunch4" %>
+  </TD>  
+<TD>
+    <%= text_field "Lunch5","Lunch5" %>
+  </TD>  
+<TD>
+    <%= text_field "Lunch6","Lunch6" %>
+  </TD>  
+<TD>
+    <%= text_field "Lunch7","Lunch7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Dinner, maxlength:8 %>
+</TD>  
+<TD>
+    <%= text_field "Dinner1","Dinner1" %>
+  </TD>  
+<TD>
+    <%= text_field "Dinner2","Dinner2"  %>
+  </TD>  
+<TD>
+    <%= text_field "Dinner3","Dinner3"  %>
+  </TD>  
+<TD>
+    <%= text_field "Dinner4","Dinner4"  %>
+  </TD>  
+<TD>
+    <%= text_field "Dinner5","Dinner5" %>
+  </TD>  
+<TD>
+    <%= text_field "Dinner6","Dinner6"  %>
+  </TD>  
+<TD>
+    <%= text_field "Dinner7","Dinner7"  %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Business_Meals %>
+</TD>  
+<TD>
+    <%= text_field "BM1","BM1" %>
+  </TD>  
+<TD>
+    <%= text_field "BM2","BM2" %>
+  </TD>  
+<TD>
+    <%= text_field "BM3","BM3" %>
+  </TD>  
+<TD>
+    <%= text_field "BM4","BM4" %>
+  </TD>  
+<TD>
+    <%= text_field "BM5","BM5" %>
+  </TD>  
+<TD>
+    <%= text_field "BM6","BM6" %>
+  </TD>  
+<TD>
+    <%=text_field "BM7","BM7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Entertainment %>
+</TD>  
+<TD>
+    <%= text_field "E1","E1" %>
+  </TD>  
+<TD>
+    <%= text_field "E2","E2" %>
+  </TD>  
+<TD>
+    <%= text_field "E3","E3" %>
+  </TD>  
+<TD>
+    <%= text_field "E4","E4" %>
+  </TD>  
+<TD>
+    <%= text_field "E5","E5" %>
+  </TD>  
+<TD>
+    <%= text_field "E6","E6" %>
+  </TD>  
+<TD>
+    <%= text_field "E7","E7" %>
+  </TD>
+  </TR>
+<TR>
+<TD>
+Other Expenses
+</TD>
+</TR>
+  <TR>
+<TD>
+    <%= f.label :Cell_Phone %>
+</TD>  
+<TD>
+    <%= text_field "C1","C1"%>
+  </TD>  
+<TD>
+    <%= text_field "C2","C2"%>
+  </TD>  
+<TD>
+    <%=text_field "C3","C3" %>
+  </TD>  
+<TD>
+    <%= text_field "C4","C4" %>
+  </TD>  
+<TD>
+    <%= text_field "C5","C5" %>
+  </TD>  
+<TD>
+    <%= text_field "C6","C6" %>
+  </TD>  
+<TD>
+    <%= text_field "C7","C7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Office_Phone %>
+</TD>  
+<TD>
+    <%= text_field "O1","O1" %>
+  </TD>  
+<TD>
+    <%= text_field "O2","O2" %>
+  </TD>  
+<TD>
+    <%= text_field "O3","O3" %>
+  </TD>  
+<TD>
+    <%= text_field "O4","O4" %>
+  </TD>  
+<TD>
+    <%= text_field "O5","O5" %>
+  </TD>  
+<TD>
+    <%= text_field "O6","O6" %>
+  </TD>  
+<TD>
+    <%= text_field "O7","O7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Postage %>
+</TD>  
+<TD>
+    <%= text_field "P1","P1" %>
+  </TD>  
+<TD>
+    <%= text_field "P2","P2" %>
+  </TD>  
+<TD>
+    <%=text_field "P3","P3" %>
+  </TD>  
+<TD>
+    <%= text_field "P4","P4" %>
+  </TD>  
+<TD>
+    <%= text_field "P5","P5"%>
+  </TD>  
+<TD>
+    <%= text_field "P6","P6" %>
+  </TD>  
+<TD>
+    <%= text_field "P7","P7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Office_Supplies %>
+</TD>  
+<TD>
+    <%=text_field "OS1","OS1" %>
+  </TD>  
+<TD>
+    <%= text_field "OS2","OS2" %>
+  </TD>  
+<TD>
+    <%= text_field "OS3","OS3" %>
+  </TD>  
+<TD>
+    <%= text_field "OS4","OS4" %>
+  </TD>  
+<TD>
+    <%= text_field "OS5","OS5" %>
+  </TD>  
+<TD>
+    <%= text_field "OS6","OS6" %>
+  </TD>  
+<TD>
+    <%= text_field "OS7","OS7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Competitor_Products %>
+</TD>  
+<TD>
+    <%= text_field "CP1","CP1" %>
+  </TD>  
+<TD>
+    <%= text_field "CP2","CP2" %>
+  </TD>  
+<TD>
+    <%= text_field "CP3","CP3" %>
+  </TD>  
+<TD>
+    <%= text_field "CP4","CP4" %>
+  </TD>  
+<TD>
+    <%= text_field "CP5","CP5" %>
+  </TD>  
+<TD>
+    <%= text_field "CP6","CP6" %>
+  </TD>  
+<TD>
+    <%= text_field "CP7","CP7" %>
+  </TD>
+  </TR>
+<TR>
+<TD>
+From Business Meals And Entertainment Above
+</TD>
+</TR>
+  <TR>
+<TD>
+    <%= f.label :Date %>
+</TD>  
+<TD>
+    <%= text_field "D1","D1" %>
+  </TD>  
+<TD>
+    <%= text_field "D2","D2"%>
+  </TD>  
+<TD>
+    <%= text_field "D3","D3" %>
+  </TD>  
+<TD>
+    <%= text_field "D4","D4" %>
+  </TD>  
+<TD>
+    <%= text_field "D5","D5" %>
+  </TD>  
+<TD>
+    <%= text_field "D6","D6" %>
+  </TD>  
+<TD>
+    <%= text_field "D7","D7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :"Name, Firm, and Position" %>
+</TD>  
+<TD>
+    <%= text_field "N1","N1" %>
+  </TD>  
+<TD>
+    <%= text_field "N2","N2" %>
+  </TD>  
+<TD>
+    <%= text_field "N3","N3" %>
+  </TD>  
+<TD>
+    <%= text_field "N4","N4" %>
+  </TD>  
+<TD>
+    <%= text_field "N5","N5"%>
+  </TD>  
+<TD>
+    <%= text_field "N6","N6" %>
+  </TD>
+<TD>
+    <%= text_field "N7","N7" %>
+  </TD>
+  </TR>
+  <TR>
+<TD>
+    <%= f.label :Purpose %>
+</TD>  
+<TD>
+    <%= text_field "Purpose1","Purpose1" %>
+  </TD>  
+<TD>
+    <%= text_field "Purpose2","Purpose2" %>
+  </TD>  
+<TD>
+    <%= text_field "Purpose3","Purpose3" %>
+  </TD>  
+<TD>
+    <%= text_field "Purpose4","Purpose4" %>
+  </TD>  
+<TD>
+    <%= text_field "Purpose5","Purpose5" %>
+  </TD>  
+<TD>
+    <%= text_field "Purpose6","Purpose6" %>
+  </TD>  
+<TD>
+    <%= text_field "Purpose7","Purpose7" %>
+  </TD>
+  </TR>
+</TABLE>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

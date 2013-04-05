@@ -1,0 +1,77 @@
+<h1>Expense Reports Database</h1>
+
+<table>
+  <tr>
+    <th>Employee name</th>
+    <th>Division</th>
+    <th>Department</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Business purpose</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Airfare</th>
+    <th>Taxitransportation</th>
+    <th>Tollsparking</th>
+    <th>Car rental</th>
+    <th>Gas</th>
+    <th>Hotel</th>
+    <th>Other</th>
+    <th>Breakfast</th>
+    <th>Lunch</th>
+    <th>Dinner</th>
+    <th>Business meals</th>
+    <th>Entertainment</th>
+    <th>Cell phone</th>
+    <th>Office phone</th>
+    <th>Postage</th>
+    <th>Office supplies</th>
+    <th>Competitor products</th>
+    <th>Date</th>
+    <th>Namefirmposition</th>
+    <th>Purpose</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @expense_reports.each do |expense_report| %>
+  <tr>
+    <td><%= expense_report.Employee_Name %></td>
+    <td><%= expense_report.Division %></td>
+    <td><%= expense_report.Department %></td>
+    <td><%= expense_report.From %></td>
+    <td><%= expense_report.To %></td>
+    <td><%= expense_report.Business_Purpose %></td>
+    <td><%= expense_report.Date %></td>
+    <td><%= expense_report.Amount %></td>
+    <td><%= expense_report.Airfare %></td>
+    <td><%= expense_report.TaxiTransportation %></td>
+    <td><%= expense_report.TollsParking %></td>
+    <td><%= expense_report.Car_Rental %></td>
+    <td><%= expense_report.Gas %></td>
+    <td><%= expense_report.Hotel %></td>
+    <td><%= expense_report.Other %></td>
+    <td><%= expense_report.Breakfast %></td>
+    <td><%= expense_report.Lunch %></td>
+    <td><%= expense_report.Dinner %></td>
+    <td><%= expense_report.Business_Meals %></td>
+    <td><%= expense_report.Entertainment %></td>
+    <td><%= expense_report.Cell_Phone %></td>
+    <td><%= expense_report.Office_Phone %></td>
+    <td><%= expense_report.Postage %></td>
+    <td><%= expense_report.Office_Supplies %></td>
+    <td><%= expense_report.Competitor_Products %></td>
+    <td><%= expense_report.Date %></td>
+    <td><%= expense_report.NameFirmPosition %></td>
+    <td><%= expense_report.Purpose %></td>
+    <td><%= link_to 'Show', expense_report %></td>
+    <td><%= link_to 'Edit', edit_expense_report_path(expense_report) %></td>
+    <td><%= link_to 'Destroy', expense_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Expense report', new_expense_report_path %>
